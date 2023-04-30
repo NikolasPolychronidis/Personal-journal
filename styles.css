@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+/* --- LAYOUT --- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: grid;
+  grid-template-columns: minmax(1em, 3em) auto minmax(1em, 3em);
+  grid-template-rows: 3.6875em auto auto 6.5625em;
+  grid-template-areas:
+    '    .    header      .   '
+    ' content content  content'
+    ' content content  content'
+    ' footer  footer   footer ';
+}
+
+/* --- HEADER --- */
+
+.header-main,
+.logo-header,
+.nav-menu-list {
+  display: flex;
+}
+
+.header-main {
+  grid-area: header;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-family: 'Roboto';
+  font-size: 0.84rem;
+}
+
+.logo-header {
+  align-items: center;
+}
+
+.logo {
+  margin-right: 0.19em;
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.nav-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-items a {
+  margin: 0 0 0 3em;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.84rem;
+  color: black;
+  text-transform: uppercase;
+}
